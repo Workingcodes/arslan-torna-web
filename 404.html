@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>404 – Sayfa Bulunamadı | Arslan Torna</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Async CSS -->
+  <link rel="preload" href="assets/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link rel="stylesheet" href="assets/style.css" /></noscript>
+
+  <style>
+    :root{--gold:#C49A22;--gold-dk:#A07D10;--gold-glow:rgba(196,154,34,0.25);--bg:#0D0D0D;--steel:#1A1F28;--steel2:#222832;--text:#CBD5E1;--muted:#6B7A8D;--white:#FFFFFF;--nav-h:86px;}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden;}
+    h1,h2,h3{font-family:'Outfit',sans-serif;font-weight:700;color:#fff;}
+  </style>
+</head>
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<nav id="navbar" role="navigation" aria-label="Ana navigasyon" class="scrolled" style="position:fixed;top:0;left:0;right:0;z-index:900;height:86px;display:flex;align-items:center;background:rgba(13,13,13,0.95);backdrop-filter:blur(12px);">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-brand">
+      <img src="assets/logo.jpg" alt="Arslan Torna Logo" class="nav-logo" onerror="this.style.display='none'" loading="eager" />
+      <div class="nav-brand-text">
+        <span class="nav-brand-name">ARSLAN TORNA</span>
+        <span class="nav-brand-sub">CNC Talaşlı İmalat</span>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="index.html" class="nav-link" data-i18n="nav-home">Ana Sayfa</a>
+      <a href="hakkimizda.html" class="nav-link" data-i18n="nav-about">Hakkımızda</a>
+      <a href="hizmetler.html" class="nav-link" data-i18n="nav-services">Hizmetler</a>
+      <a href="galeri.html" class="nav-link" data-i18n="nav-gallery">Galeri</a>
+      <a href="iletisim.html" class="nav-link" data-i18n="nav-contact">İletişim</a>
+    </div>
+    <div class="lang-toggle">
+      <button class="lang-btn active" data-lang="tr">TR</button>
+      <button class="lang-btn" data-lang="en">EN</button>
+    </div>
+    <a href="iletisim.html" class="btn-primary nav-cta-btn" data-i18n="nav-cta">Teklif Al</a>
+    <button class="hamburger" id="hamburger" aria-label="Menüyü aç/kapat" aria-expanded="false" aria-controls="nav-mobile">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile Nav -->
+<nav id="nav-mobile" role="navigation" aria-label="Mobil navigasyon">
+  <a href="index.html" class="nav-link" data-i18n="nav-home">Ana Sayfa</a>
+  <a href="hakkimizda.html" class="nav-link" data-i18n="nav-about">Hakkımızda</a>
+  <a href="hizmetler.html" class="nav-link" data-i18n="nav-services">Hizmetler</a>
+  <a href="galeri.html" class="nav-link" data-i18n="nav-gallery">Galeri</a>
+  <a href="iletisim.html" class="nav-link" data-i18n="nav-contact">İletişim</a>
+  <div class="nav-mobile-footer">
+    <div class="lang-toggle">
+      <button class="lang-btn active" data-lang="tr">TR</button>
+      <button class="lang-btn" data-lang="en">EN</button>
+    </div>
+    <a href="iletisim.html" class="btn-primary" style="font-size:.85rem;padding:.5rem 1rem;" data-i18n="nav-cta">Teklif Al</a>
+  </div>
+</nav>
+
+<!-- ===== 404 ===== -->
+<main class="error-section" aria-label="Sayfa bulunamadı">
+  <div class="error-content fade-in">
+    <div class="error-code">404</div>
+    <h2 data-i18n="404-title">Sayfa Bulunamadı</h2>
+    <p data-i18n="404-p">Aradığınız sayfa mevcut değil veya taşınmış olabilir.</p>
+    <div class="btn-group" style="justify-content:center;">
+      <a href="index.html" class="btn-primary"><i class="fas fa-home"></i> <span data-i18n="404-btn1">Ana Sayfaya Dön</span></a>
+      <a href="iletisim.html" class="btn-outline"><i class="fas fa-phone"></i> <span data-i18n="404-btn2">Bize Ulaşın</span></a>
+    </div>
+  </div>
+</main>
+
+<!-- WhatsApp Float -->
+<a href="https://wa.me/902122972838" class="wa-float" target="_blank" rel="noopener" aria-label="WhatsApp ile iletişime geçin">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<script src="js/main.js"></script>
+</body>
+</html>

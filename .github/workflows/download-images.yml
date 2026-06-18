@@ -1,0 +1,124 @@
+name: Download Instagram Images
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  download-images:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Create gallery directory
+        run: mkdir -p img/galeri
+
+      - name: Download POST_1 → ig_1.jpg
+        run: |
+          curl -L --retry 3 --retry-delay 2 -o img/galeri/ig_1.jpg \
+            "https://scontent-yyz1-1.cdninstagram.com/v/t51.2885-15/469730715_17960109629838728_147270638555011671_n.jpg?stp=dst-jpg_e15_tt6&_nc_ht=scontent-yyz1-1.cdninstagram.com&_nc_cat=108&_nc_oc=Q6cZ2gE1tMe-Q9PiGui7bNMlyZ5LBhBB-xUSCiWFq0aP5j4QIUTTBfITLoizkj6f6XLdl0E&_nc_ohc=uZ8qxj2TYPQQ7kNvwGUbISl&_nc_gid=M2eMWMLC7P5LodwfQBoemQ&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_Af9UN6A6t9YIRoZYh8iT2ZdMRjYoCIyRVMvYX2cUoJenxg&oe=6A3A4DB4&_nc_sid=8b3546" \
+            -H "User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" \
+            -H "Referer: https://www.instagram.com/" || echo "Warning: ig_1.jpg download failed"
+
+      - name: Download POST_2 → ig_2.jpg
+        run: |
+          curl -L --retry 3 --retry-delay 2 -o img/galeri/ig_2.jpg \
+            "https://scontent-yyz1-1.cdninstagram.com/v/t51.2885-15/470795765_17960946581838728_7052033419222382592_n.jpg?stp=dst-jpg_e35_p1080x1080_sh2.08_tt6&_nc_ht=scontent-yyz1-1.cdninstagram.com&_nc_cat=108&_nc_oc=Q6cZ2gE1tMe-Q9PiGui7bNMlyZ5LBhBB-xUSCiWFq0aP5j4QIUTTBfITLoizkj6f6XLdl0E&_nc_ohc=dppA8zD34rEQ7kNvwF6pJ8j&_nc_gid=M2eMWMLC7P5LodwfQBoemQ&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_Af_vhXTwUFiKnwOq-WObYPyCm6j_m7Lp9Snq3Ew_sfFvEQ&oe=6A3A4138&_nc_sid=8b3546" \
+            -H "User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" \
+            -H "Referer: https://www.instagram.com/" || echo "Warning: ig_2.jpg download failed"
+
+      - name: Download POST_3 → ig_3.jpg
+        run: |
+          curl -L --retry 3 --retry-delay 2 -o img/galeri/ig_3.jpg \
+            "https://scontent-yyz1-1.cdninstagram.com/v/t51.82787-15/660875119_18013549262838728_8245137809472944957_n.jpg?stp=dst-jpg_e15_tt6&_nc_ht=scontent-yyz1-1.cdninstagram.com&_nc_cat=108&_nc_oc=Q6cZ2gE1tMe-Q9PiGui7bNMlyZ5LBhBB-xUSCiWFq0aP5j4QIUTTBfITLoizkj6f6XLdl0E&_nc_ohc=FjLMmuvwsnYQ7kNvwFz1ghW&_nc_gid=M2eMWMLC7P5LodwfQBoemQ&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_Af9aqcLuQT-MplgeCHRIFKPajhXMnkdoy2QouOwpSsaG0g&oe=6A3A4E4D&_nc_sid=8b3546" \
+            -H "User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" \
+            -H "Referer: https://www.instagram.com/" || echo "Warning: ig_3.jpg download failed"
+
+      - name: Download POST_4 → ig_4.jpg
+        run: |
+          curl -L --retry 3 --retry-delay 2 -o img/galeri/ig_4.jpg \
+            "https://scontent-yyz1-1.cdninstagram.com/v/t51.82787-15/659766156_18013003334838728_2663542801253263880_n.jpg?stp=dst-jpg_e15_tt6&_nc_ht=scontent-yyz1-1.cdninstagram.com&_nc_cat=108&_nc_oc=Q6cZ2gE1tMe-Q9PiGui7bNMlyZ5LBhBB-xUSCiWFq0aP5j4QIUTTBfITLoizkj6f6XLdl0E&_nc_ohc=L1qOAG0P9BMQ7kNvwEMS23Q&_nc_gid=M2eMWMLC7P5LodwfQBoemQ&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_Af8rrDXwxAn8Vb_T1TMZpmEEz3qKmIKftIYVu5XzcNKSUQ&oe=6A3A4E9C&_nc_sid=8b3546" \
+            -H "User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" \
+            -H "Referer: https://www.instagram.com/" || echo "Warning: ig_4.jpg download failed"
+
+      - name: Download POST_5 → ig_5.jpg
+        run: |
+          curl -L --retry 3 --retry-delay 2 -o img/galeri/ig_5.jpg \
+            "https://scontent-yyz1-1.cdninstagram.com/v/t51.71878-15/560311071_3123439387830760_931771510442576953_n.jpg?stp=dst-jpg_e15_tt6&_nc_ht=scontent-yyz1-1.cdninstagram.com&_nc_cat=104&_nc_oc=Q6cZ2gE1tMe-Q9PiGui7bNMlyZ5LBhBB-xUSCiWFq0aP5j4QIUTTBfITLoizkj6f6XLdl0E&_nc_ohc=9yXpM0nbZj8Q7kNvwHPH8bJ&_nc_gid=M2eMWMLC7P5LodwfQBoemQ&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_Af-9p-16ZHfAPx4pJMATlQZY4rRbpH11CxkI4svHO5c12g&oe=6A3A3C1F&_nc_sid=8b3546" \
+            -H "User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" \
+            -H "Referer: https://www.instagram.com/" || echo "Warning: ig_5.jpg download failed"
+
+      - name: Download POST_6 → ig_6.jpg
+        run: |
+          curl -L --retry 3 --retry-delay 2 -o img/galeri/ig_6.jpg \
+            "https://scontent-yyz1-1.cdninstagram.com/v/t51.71878-15/558993407_1889637181898676_3892640650816669154_n.jpg?stp=dst-jpg_e15_tt6&_nc_ht=scontent-yyz1-1.cdninstagram.com&_nc_cat=100&_nc_oc=Q6cZ2gE1tMe-Q9PiGui7bNMlyZ5LBhBB-xUSCiWFq0aP5j4QIUTTBfITLoizkj6f6XLdl0E&_nc_ohc=z_mYc_3_X28Q7kNvwGTyXDN&_nc_gid=M2eMWMLC7P5LodwfQBoemQ&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_Af8wMR6a6rBY_TN9ujUKMqgsXJm7HeXfQ_K2HEogIet4Lg&oe=6A3A47E1&_nc_sid=8b3546" \
+            -H "User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" \
+            -H "Referer: https://www.instagram.com/" || echo "Warning: ig_6.jpg download failed"
+
+      - name: Download POST_7 → ig_7.jpg
+        run: |
+          curl -L --retry 3 --retry-delay 2 -o img/galeri/ig_7.jpg \
+            "https://scontent-yyz1-1.cdninstagram.com/v/t51.71878-15/510457239_715918828033873_4000222638148425193_n.jpg?stp=dst-jpg_e15_tt6&_nc_ht=scontent-yyz1-1.cdninstagram.com&_nc_cat=101&_nc_oc=Q6cZ2gE1tMe-Q9PiGui7bNMlyZ5LBhBB-xUSCiWFq0aP5j4QIUTTBfITLoizkj6f6XLdl0E&_nc_ohc=NIzIDjctRKYQ7kNvwHZdXi-&_nc_gid=M2eMWMLC7P5LodwfQBoemQ&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_Af-0S3BjJwo5SFDf_TekFo1AxJZFRtDfPMaZMG9OlgdztQ&oe=6A3A4BA7&_nc_sid=8b3546" \
+            -H "User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" \
+            -H "Referer: https://www.instagram.com/" || echo "Warning: ig_7.jpg download failed"
+
+      - name: Download POST_8 → ig_8.jpg
+        run: |
+          curl -L --retry 3 --retry-delay 2 -o img/galeri/ig_8.jpg \
+            "https://scontent-yyz1-1.cdninstagram.com/v/t51.71878-15/503526378_4091937251018631_981084026442153367_n.jpg?stp=dst-jpg_e15_tt6&_nc_ht=scontent-yyz1-1.cdninstagram.com&_nc_cat=103&_nc_oc=Q6cZ2gE1tMe-Q9PiGui7bNMlyZ5LBhBB-xUSCiWFq0aP5j4QIUTTBfITLoizkj6f6XLdl0E&_nc_ohc=gPs9wit_INEQ7kNvwG2Pua5&_nc_gid=M2eMWMLC7P5LodwfQBoemQ&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_Af_TSjbgSpN9YGG1B7AlDVZuh8TdHhW8YZCgs7a2mhItcg&oe=6A3A488B&_nc_sid=8b3546" \
+            -H "User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" \
+            -H "Referer: https://www.instagram.com/" || echo "Warning: ig_8.jpg download failed"
+
+      - name: Download POST_9 → ig_9.jpg
+        run: |
+          curl -L --retry 3 --retry-delay 2 -o img/galeri/ig_9.jpg \
+            "https://scontent-yyz1-1.cdninstagram.com/v/t51.71878-15/504392193_1255683026253808_725977466637804918_n.jpg?stp=dst-jpg_e15_tt6&_nc_ht=scontent-yyz1-1.cdninstagram.com&_nc_cat=104&_nc_oc=Q6cZ2gE1tMe-Q9PiGui7bNMlyZ5LBhBB-xUSCiWFq0aP5j4QIUTTBfITLoizkj6f6XLdl0E&_nc_ohc=Ja3lMfVn9TEQ7kNvwGNo-7F&_nc_gid=M2eMWMLC7P5LodwfQBoemQ&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_Af-82cCinHGEC0nxPdvRdJuAU9JnL8bW1Nyf7ahDMMAEOg&oe=6A3A2612&_nc_sid=8b3546" \
+            -H "User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" \
+            -H "Referer: https://www.instagram.com/" || echo "Warning: ig_9.jpg download failed"
+
+      - name: Download POST_10 → ig_10.jpg
+        run: |
+          curl -L --retry 3 --retry-delay 2 -o img/galeri/ig_10.jpg \
+            "https://scontent-yyz1-1.cdninstagram.com/v/t51.71878-15/503041825_1419421216079334_92056561341905190_n.jpg?stp=dst-jpg_e15_tt6&_nc_ht=scontent-yyz1-1.cdninstagram.com&_nc_cat=106&_nc_oc=Q6cZ2gE1tMe-Q9PiGui7bNMlyZ5LBhBB-xUSCiWFq0aP5j4QIUTTBfITLoizkj6f6XLdl0E&_nc_ohc=poh37UaPT2AQ7kNvwFVjjMR&_nc_gid=M2eMWMLC7P5LodwfQBoemQ&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_Af9WKn_qVWUvxhGn0p7t_uH7oNDoa9vId4YDQHfU4tgnsg&oe=6A3A4379&_nc_sid=10d13b" \
+            -H "User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" \
+            -H "Referer: https://www.instagram.com/" || echo "Warning: ig_10.jpg download failed"
+
+      - name: Download POST_11 → ig_11.jpg
+        run: |
+          curl -L --retry 3 --retry-delay 2 -o img/galeri/ig_11.jpg \
+            "https://scontent-yyz1-1.cdninstagram.com/v/t51.71878-15/504097872_2103965233436642_4647214389540455733_n.jpg?stp=dst-jpg_e15_tt6&_nc_ht=scontent-yyz1-1.cdninstagram.com&_nc_cat=102&_nc_oc=Q6cZ2gE1tMe-Q9PiGui7bNMlyZ5LBhBB-xUSCiWFq0aP5j4QIUTTBfITLoizkj6f6XLdl0E&_nc_ohc=sv2w62n7Bm0Q7kNvwEdd13j&_nc_gid=M2eMWMLC7P5LodwfQBoemQ&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_Af9xa_geFLtJ-7k9ReHv4fTaK4gd84E5ZOVHOee1nfgeOQ&oe=6A3A3B09&_nc_sid=10d13b" \
+            -H "User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" \
+            -H "Referer: https://www.instagram.com/" || echo "Warning: ig_11.jpg download failed"
+
+      - name: Download POST_12 → ig_12.jpg
+        run: |
+          curl -L --retry 3 --retry-delay 2 -o img/galeri/ig_12.jpg \
+            "https://scontent-yyz1-1.cdninstagram.com/v/t51.71878-15/502705002_709096228728728_4164511978805291881_n.jpg?stp=dst-jpg_e15_tt6&_nc_ht=scontent-yyz1-1.cdninstagram.com&_nc_cat=108&_nc_oc=Q6cZ2gE1tMe-Q9PiGui7bNMlyZ5LBhBB-xUSCiWFq0aP5j4QIUTTBfITLoizkj6f6XLdl0E&_nc_ohc=rDnMrobyN0YQ7kNvwFEerDt&_nc_gid=M2eMWMLC7P5LodwfQBoemQ&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_Af90cEcW33XxtSRClMo_5-f9YIgzzESJ8WtfvpLgFiA0yg&oe=6A3A2916&_nc_sid=10d13b" \
+            -H "User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" \
+            -H "Referer: https://www.instagram.com/" || echo "Warning: ig_12.jpg download failed"
+
+      - name: Download LOGO → assets/logo.jpg
+        run: |
+          mkdir -p assets
+          curl -L --retry 3 --retry-delay 2 -o assets/logo.jpg \
+            "https://scontent-yyz1-1.cdninstagram.com/v/t51.2885-19/473286160_516289051470086_7432781912719585981_n.jpg?stp=dst-jpg_e0_s150x150_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLmRqYW5nby4xMDM5LmMyIn0&_nc_ht=scontent-yyz1-1.cdninstagram.com&_nc_cat=102&_nc_oc=Q6cZ2gE1tMe-Q9PiGui7bNMlyZ5LBhBB-xUSCiWFq0aP5j4QIUTTBfITLoizkj6f6XLdl0E&_nc_ohc=DGhqdZJ1sYcQ7kNvwG-z7kI&_nc_gid=M2eMWMLC7P5LodwfQBoemQ&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_Af_LdPkWTN_FVV5zL0xfZWbhWNXEVPHWDWXUp_l7O60jew&oe=6A3A1D73&_nc_sid=8b3546" \
+            -H "User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" \
+            -H "Referer: https://www.instagram.com/" || echo "Warning: logo.jpg download failed"
+
+      - name: List downloaded files
+        run: |
+          echo "=== Gallery images ==="
+          ls -lh img/galeri/ 2>/dev/null || echo "No gallery images found"
+          echo "=== Assets ==="
+          ls -lh assets/ 2>/dev/null || echo "No assets found"
+
+      - name: Commit downloaded images
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add img/galeri/ assets/logo.jpg 2>/dev/null || true
+          git diff --staged --quiet || git commit -m "chore: download Instagram images via workflow"
+          git push || echo "Nothing to push"
